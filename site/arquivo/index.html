@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquivo de Projetos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="site-icon">
+        <img src="img/favicon.png" alt="Ícone do site">
+      </div>
+      <h1>Arquivo de Projetos</h1>
+    </div>
+    <div class="header-right">
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Projetos dos Alunos</h2>
+    <p>Aqui estão armazenados os trabalhos antigos de alunos em HTML e CSS.</p>
+
+    <section class="projetos-grid">
+      <!-- Exemplo de projeto -->
+      <div class="projeto">
+        <a href="https://github.com/Rattop/projeto-aluno1" target="_blank">
+          <img src="img/projeto1.png" alt="Projeto do Aluno 1">
+          <p>Aluno 1 - Projeto Portfólio</p>
+        </a>
+      </div>
+
+      <!-- Adicione mais projetos conforme necessário -->
+      <div class="projeto">
+        <a href="https://github.com/Rattop/projeto-aluno2" target="_blank">
+          <img src="img/projeto2.png" alt="Projeto do Aluno 2">
+          <p>Aluno 2 - Página de Receitas</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano-atual"></span> Rafael de Souza | Portal do Aluno</p>
+  </footer>
+
+  <script>
+    document.getElementById("ano-atual").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
