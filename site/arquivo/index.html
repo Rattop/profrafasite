@@ -1,57 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arquivo de Projetos</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Aulas, Programação, Microcamp, Portfólio, Alunos">
+    <meta name="description" content="Site do Professor Rafael do curso de Informática e Hardware da escola Microcamp Florianópolis. Aqui ficam também arquivados os sites completos de todos os alunos que já passaram pelo curso">
+    <meta name="author" content="Prof. Rafael de Souza Padilha">
+    <meta name="robots" content="index">
+    <meta http-equiv="content-language" content="pt-br">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="https://files.catbox.moe/vqwe9n.png" type="image/png">
+    <title>Professor Rafael - Arquivo</title>
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <div class="site-icon">
-        <img src="img/favicon.png" alt="Ícone do site">
-      </div>
-      <h1>Arquivo de Projetos</h1>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <div class="site-icon"><img src="" alt="icone do site"></div>
+            </div>
+            <div class="header-text">
+                <h1>Projetos dos Alunos:</h1>
+                <h2>Professor: Rafael de Souza</h2>
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li class="dropdown">
+                            <a href="">Arquivo</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Turma Segunda as 10</a></li>
+                                <li><a href="#">Turma Segunda as 16</a></li>
+                                <li><a href="#">Turma X</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </div>
+
+        </header>
+            <h2>Sejam Bem Vindos ao nosso Arquivo!</h2>
+            <h3>Site encontra-se em manutenção no momento</h3>
+        <section id="resumo">
+            <p>Aqui estão arquivados os projetos de todos os alunos que trabalhei</p>
+            <p>espero que lhe seja de grande auxílio os conteúdos desta página!</p>
+
+
+        </section>
+        <section id="projetos">
+            <h3>Projetos ainda em desenvolvimento:</h3>
+        </section>
+        <footer>
+            <h3>Contato</h3>
+            <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno</p>
+            <!-- com Links -->
+            <p>📞 Telefone: <a href="tel:+5548988016299">(48) 9 8801-6299</a></p>
+            <p>📧 E-mail: <a href="mailto:rafaelspadilhaprof+site@gmail.com">rafaelspadilhaprof@gmail.com</a></p>
+            <p>📸 Instagram: <a href="https://www.instagram.com/periplous_udesc" target="_blank">@exemplo_apenas</a></p>
+          </footer>
     </div>
-    <div class="header-right">
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h2>Projetos dos Alunos</h2>
-    <p>Aqui estão armazenados os trabalhos antigos de alunos em HTML e CSS.</p>
-
-    <section class="projetos-grid">
-      <!-- Exemplo de projeto -->
-      <div class="projeto">
-        <a href="https://github.com/Rattop/projeto-aluno1" target="_blank">
-          <img src="img/projeto1.png" alt="Projeto do Aluno 1">
-          <p>Aluno 1 - Projeto Portfólio</p>
-        </a>
-      </div>
-
-      <!-- Adicione mais projetos conforme necessário -->
-      <div class="projeto">
-        <a href="https://github.com/Rattop/projeto-aluno2" target="_blank">
-          <img src="img/projeto2.png" alt="Projeto do Aluno 2">
-          <p>Aluno 2 - Página de Receitas</p>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; <span id="ano-atual"></span> Rafael de Souza | Portal do Aluno</p>
-  </footer>
-
-  <script>
-    document.getElementById("ano-atual").textContent = new Date().getFullYear();
-  </script>
+    <script src="../script.js"></script>
 </body>
 </html>
