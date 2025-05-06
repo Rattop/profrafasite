@@ -34,6 +34,11 @@ header {
 
 }
 
+.header-text h1,
+.header-text h2 {
+    margin: 0; /* Remove margens para manter o alinhamento */
+}
+
 .site-icon img {
 
     display: flex;
