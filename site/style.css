@@ -1,6 +1,6 @@
 /* normalize.css */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 :root {
   --color-primary: #4b0082;
   --color-secondary: #8078ae;
@@ -10,8 +10,9 @@
   --radius: 0.5rem;
   --highlight: #FFD700;
   --hover-bg: #5e60ce;
-  --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
   --header-height: 120px;
+  --header-font: 'Inter', system-ui, sans-serif;
 }
 
 body {
@@ -41,12 +42,13 @@ header {
   margin: 0 auto;
   background-color: var(--color-primary);
   color: var(--color-bg);
-  padding: 10px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing);
   text-align: center;
+  font-family: var(--header-font);
 }
 
 @media (min-width: 600px) {
@@ -93,16 +95,18 @@ header {
 .header-right nav ul li a {
   text-decoration: none;
   color: var(--color-bg);
-  font-weight: bold;
-  transition: color 0.3s ease;
-  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 14px;
   border-radius: var(--radius);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header-right nav ul li a:hover,
 .header-right nav ul li a:focus {
   color: var(--highlight);
   background-color: var(--hover-bg);
+  text-decoration: underline;
   outline: none;
 }
 
@@ -151,4 +155,11 @@ footer {
   text-align: center;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
+}
+footer a{
+  color: #CCFFFF;
+  text-decoration: none;
+  outline: 2px, solid #F0F0F0; 
+  transition: color 0.2s ease-in-out; 
+
 }
