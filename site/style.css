@@ -5,7 +5,7 @@
   --color-primary: #4b0082;
   --color-secondary: #8078ae;
   --color-bg: #ffffff;
-  --color-text: #333333;
+  --color-text: #ffffff;
   --spacing: 1rem;
   --radius: 0.5rem;
   --highlight: #FFD700;
@@ -15,7 +15,8 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:"Nunito", Arial, Helvetica, sans-serif;
+    font-style: normal;
     background: url('https://files.catbox.moe/4hmgnq.jfif');
     background-size: cover;
     text-align: center;
@@ -28,7 +29,7 @@ body {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(128, 120, 174, 0.7);
+  background-color: rgba(128, 120, 174, 0.75);
   color: var(--color-text);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -40,7 +41,7 @@ header {
   margin: 0 auto;
   background-color: var(--color-primary);
   color: var(--color-bg);
-  padding: 15px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +53,6 @@ header {
   header {
     flex-direction: row;
     justify-content: space-between;
-    padding: calc(var(--spacing) * 2);
   }
 }
 
