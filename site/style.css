@@ -44,19 +44,13 @@ header {
   color: var(--color-bg);
   padding: 20px 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: var(--spacing);
   text-align: center;
   font-family: var(--header-font);
 }
 
-@media (min-width: 600px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
 
 .header-left {
   display: flex;
@@ -86,11 +80,6 @@ header {
   align-items: center;
 }
 
-@media (min-width: 600px) {
-  .header-right nav ul {
-    flex-direction: row;
-  }
-}
 
 .header-right nav ul li a {
   text-decoration: none;
