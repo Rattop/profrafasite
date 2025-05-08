@@ -11,7 +11,7 @@
   --radius: 0.5rem;
   --highlight: #FFD700;
   --hover-bg: #5e60ce;
-  --shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   --header-height: 120px;
   --header-font: 'Inter', system-ui, sans-serif;
 }
@@ -55,6 +55,7 @@ header {
 
 .header-left {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: var(--spacing);
 }
@@ -71,49 +72,55 @@ header {
   transform: scale(1.1) rotate(3deg);
 }
 
-.header-right nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.header-right {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing);
-  align-items: center;
+  justify-content: end;
 }
+
+@media (max-width: 600px){
+  .header-right nav ul {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+.header-right nav ul {
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  gap: 15px; 
+}
+
+
 
 
 .header-right nav ul li a {
   text-decoration: none;
-  color: var(--color-bg);
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 10px 14px;
-  border-radius: var(--radius);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.header-right nav ul li a:hover,
-.header-right nav ul li a:focus {
-  color: var(--highlight);
-  background-color: var(--hover-bg);
-  text-decoration: underline;
-  outline: none;
+.header-right nav ul li a:hover {
+  color: #FFD700; 
 }
+
 
 .header-right nav ul li.dropdown {
-  position: relative;
+  position: relative; 
 }
 
 .header-right nav ul li.dropdown .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--color-primary);
+  background-color: #4B0082;
   min-width: 160px;
-  box-shadow: var(--shadow);
-  z-index: 100;
-  border-radius: var(--radius);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 0;
+  text-align: left;
 }
 
 .header-right nav ul li.dropdown:hover .dropdown-content {
@@ -121,19 +128,19 @@ header {
 }
 
 .header-right nav ul li.dropdown .dropdown-content li {
+  display: block;
   margin: 0;
 }
 
 .header-right nav ul li.dropdown .dropdown-content li a {
-  display: block;
   padding: 10px 16px;
-  color: var(--color-bg);
+  display: block;
+  color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
 .header-right nav ul li.dropdown .dropdown-content li a:hover {
-  background-color: var(--hover-bg);
+  background-color: #005f73;
 }
 
 footer {
@@ -149,7 +156,7 @@ footer {
 footer a{
   color: #CCFFFF;
   text-decoration: none;
-  outline: 2px, solid #F0F0F0; 
+  outline: 2px solid #F0F0F0; 
   transition: color 0.2s ease-in-out; 
 
 }
