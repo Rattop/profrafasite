@@ -19,18 +19,23 @@
     <meta name="twitter:title" content="Arquivo Prof Rafael">
     <meta name="twitter:description" content="Aqui você encontra o arquivo de nossas aulas.">
     <meta name="twitter:image" content="https://files.catbox.moe/vqwe9n.png">
+    
+    <!-- Seção de Fontes(vou precisar depoiskkk) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">   
+
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-left">
                 <div class="site-icon"><img src="https://files.catbox.moe/vqwe9n.png" alt="icone do site"></div>
-                <div class="header-text">
-                    <h1>Aula de Programação em HTML</h1>
-                    <h2>Professor: Rafael de Souza</h2>
-                </div>
             </div>
-
+            <div class="header-text">
+                <h1>Aula de Programação em HTML</h1>
+                <h2>Professor: Rafael de Souza</h2>
+            </div>
             <div class="header-right">
                 <nav>
                     <ul>
@@ -56,25 +61,58 @@
             <h3>Resumo</h3>
             <p>Site destinado ao portfolio dos alunos do professor Rafael de Souza, Aqui estão arquivados todos os projetos desenvolvidos pelos alunos no decorrer dos cursos, siga os botões para os sites dos alunos que ainda estão desenvolvendo os demais alunos estão arquivados na seção "Arquivo" Lá ficam salvos sites dos alunos corrigidos pelo professor, com todas as correções comentadas no código.</p>
 
+  <main>
+    <section aria-labelledby="boas-vindas">
+      <h2 id="boas-vindas">Sejam Bem-vindos!</h2>
+      <p class="manutencao">Site encontra-se em manutenção no momento.</p>
+    </section>
 
-        </section>
-        <section id="projetos">
-            <h3>Projetos ainda em desenvolvimento:</h3>
-        </section>
-        <section id="playlist">
-            <h3>Playlist que tocamos nas aulas:</h3>
-            <p>Ouça uma musiquinha enquanto programa! Programação sem música é só escrita</p>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?si=" frameborder="1" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-        </section>
-        <footer>
-            <h3>Contato</h3>
-            <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno</p>
-            <!-- com Links -->
-            <p>📞 Telefone: <a href="tel:+5548988016299">(48) 9 8801-6299</a></p>
-            <p>📧 E-mail: <a href="mailto:rafaelspadilhaprof+site@gmail.com">rafaelspadilhaprof@gmail.com</a></p>
-            <p>📸 Instagram: <a href="https://www.instagram.com/periplous_udesc" target="_blank">@exemplo_apenas</a></p>
-          </footer>
-    </div>
-    <script src="script.js"></script>
+    <section id="resumo" aria-labelledby="resumo-titulo">
+      <h2 id="resumo-titulo">Resumo</h2>
+      <p>
+        Site destinado ao portfólio dos alunos do professor Rafael de Souza. Aqui estão arquivados todos os projetos desenvolvidos pelos alunos no decorrer dos cursos. Siga os botões para os sites dos alunos que ainda estão desenvolvendo; os demais alunos estão arquivados na seção "Arquivo", onde ficam salvos sites corrigidos pelo professor, com todas as correções comentadas no código.
+      </p>
+    </section>
+
+    <section id="projetos" aria-labelledby="projetos-titulo">
+      <h2 id="projetos-titulo">Projetos em desenvolvimento</h2>
+      <!-- Adicione aqui a lista de projetos se desejar -->
+    </section>
+
+    <section id="playlist" aria-labelledby="playlist-titulo">
+        <h2 id="playlist-titulo">Playlist das aulas</h2>
+        <p>
+          Ouça uma musiquinha enquanto programa! Programação sem música é só escrita.
+        </p>
+        <div class="video-responsive">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/videoseries?si=rGoz-abQdfl8LTwG&amp;list=PLguu0cFbTsbakwkYjznXFYhCkWCHZHqZh"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay; encrypted-media"
+            title="Playlist das aulas">
+          </iframe>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+    <section aria-labelledby="contato-titulo">
+      <h2 id="contato-titulo">Contato</h2>
+      <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno</p>
+      <address>
+        <p>📞 <a href="tel:+5548988016299">(48) 9 8801-6299</a></p>
+        <p>📧 <a href="mailto:rafaelspadilhaprof+site@gmail.com">rafaelspadilhaprof@gmail.com</a></p>
+        <p>📸 <a href="https://www.instagram.com/periplous_udesc" target="_blank" rel="noopener">@exemplo_apenas</a></p>
+      </address>
+    </section>
+  </footer>
+
+  <script>
+    // Atualiza o ano automaticamente
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
