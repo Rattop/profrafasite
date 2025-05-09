@@ -1,118 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Aulas, Programação, Microcamp, Portfólio, Alunos">
-    <meta name="description" content="Site do Professor Rafael do curso de Informática e Hardware da escola Microcamp Florianópolis. Aqui ficam também arquivados os sites completos de todos os alunos que já passaram pelo curso">
+    <!-- Meta tags do seu site original -->
+    <meta name="keywords" content="Aulas, Programação, Microcamp, Portfólio, Alunos, Professor Rafael">
+    <meta name="description" content="Site do Professor Rafael do curso de Informática e Hardware da escola Microcamp Florianópolis. Aqui ficam também arquivados os sites completos de todos os alunos que já passaram pelo curso.">
     <meta name="author" content="Prof. Rafael de Souza Padilha">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://files.catbox.moe/vqwe9n.png" type="image/png">
-    <title>Professor Rafael - Programação!</title>
-    <meta property="og:title" content="Arquivo Prof Rafa">
-    <meta property="og:description" content="Aqui você encontra o arquivo de nossas aulas.">
+    <meta property="og:title" content="Professor Rafael - Programação!">
+    <meta property="og:description" content="Site do Professor Rafael. Aqui você encontra o arquivo de nossas aulas e portfólios dos alunos.">
     <meta property="og:image" content="https://files.catbox.moe/vqwe9n.png">
-    <meta property="og:url" content="https://profrafasite.onrender.com/">
+    <meta property="og:url" content="https://profrafasite.onrender.com/"> {/* Atualize se o URL mudar */}
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Arquivo Prof Rafael">
-    <meta name="twitter:description" content="Aqui você encontra o arquivo de nossas aulas.">
+    <meta name="twitter:title" content="Professor Rafael - Programação!">
+    <meta name="twitter:description" content="Site do Professor Rafael. Aqui você encontra o arquivo de nossas aulas e portfólios dos alunos.">
     <meta name="twitter:image" content="https://files.catbox.moe/vqwe9n.png">
-    
-    <!-- Seção de Fontes(vou precisar depoiskkk) -->
+    <!-- Fim das meta tags do seu site original -->
+
+    <title>Professor Rafael - Programação!</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">   
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-left">
-                <div class="site-icon"><img src="https://files.catbox.moe/vqwe9n.png" alt="icone do site"></div>
+
+    <header class="site-header">
+        <div class="container header-container-custom">
+            <div class="logo-area">
+                <img src="https://files.catbox.moe/vqwe9n.png" alt="Ícone Professor Rafael" class="site-icon-custom">
+                <div class="header-titles-custom">
+                    <h1>Aula de Programação</h1>
+                    <h2>Prof. Rafael de Souza</h2>
+                </div>
             </div>
-            <div class="header-text">
-                <h1>Aula de Programação em HTML</h1>
-                <h2>Professor: Rafael de Souza</h2>
-            </div>
-            <div class="header-right">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li class="dropdown">
-                            <a href="#" aria-haspopup="true" aria-expanded="false">Arquivo</a>
-                            <ul class="dropdown-content">
-                                <li><a href="arquivo/index.html">Turma Segunda as 10</a></li>
-                                <li><a href="#">Turma X</a></li>
-                                <li><a href="#">Turma Y</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                
-            </div>
-
-        </header>
-            <h2>Sejam Bem Vindos!</h2>
-            <h3>Site encontra-se em manutenção no momento</h3>
-        <section id="resumo">
-            <h3>Resumo</h3>
-            <p>Site destinado ao portfolio dos alunos do professor Rafael de Souza, Aqui estão arquivados todos os projetos desenvolvidos pelos alunos no decorrer dos cursos, siga os botões para os sites dos alunos que ainda estão desenvolvendo os demais alunos estão arquivados na seção "Arquivo" Lá ficam salvos sites dos alunos corrigidos pelo professor, com todas as correções comentadas no código.</p>
-
-  <main>
-    <section aria-labelledby="boas-vindas">
-      <h2 id="boas-vindas">Sejam Bem-vindos!</h2>
-      <p class="manutencao">Site encontra-se em manutenção no momento.</p>
-    </section>
-
-    <section id="resumo" aria-labelledby="resumo-titulo">
-      <h2 id="resumo-titulo">Resumo</h2>
-      <p>
-        Site destinado ao portfólio dos alunos do professor Rafael de Souza. Aqui estão arquivados todos os projetos desenvolvidos pelos alunos no decorrer dos cursos. Siga os botões para os sites dos alunos que ainda estão desenvolvendo; os demais alunos estão arquivados na seção "Arquivo", onde ficam salvos sites corrigidos pelo professor, com todas as correções comentadas no código.
-      </p>
-    </section>
-
-    <section id="projetos" aria-labelledby="projetos-titulo">
-      <h2 id="projetos-titulo">Projetos em desenvolvimento</h2>
-      <!-- Adicione aqui a lista de projetos se desejar -->
-    </section>
-
-    <section id="playlist" aria-labelledby="playlist-titulo">
-        <h2 id="playlist-titulo">Playlist das aulas</h2>
-        <p>
-          Ouça uma musiquinha enquanto programa! Programação sem música é só escrita.
-        </p>
-        <div class="video-responsive">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/videoseries?si=rGoz-abQdfl8LTwG&amp;list=PLguu0cFbTsbakwkYjznXFYhCkWCHZHqZh"
-            frameborder="0"
-            allowfullscreen
-            allow="autoplay; encrypted-media"
-            title="Playlist das aulas">
-          </iframe>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Abrir navegação">
+                    <span class="hamburger"></span>
+                </button>
+                <ul>
+                    <li><a href="#inicio" class="active">Início</a></li>
+                    <li><a href="#resumo">Sobre</a></li>
+                    <li class="dropdown-nav">
+                        <a href="#" class="dropdown-toggle-nav">Arquivo <span class="arrow-down"></span></a>
+                        <ul class="dropdown-menu-nav">
+                            <li><a href="arquivo/index.html">Turma Segunda as 10</a></li>
+                            <li><a href="#">Turma X (Placeholder)</a></li>
+                            <li><a href="#">Turma Y (Placeholder)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-      </section>
-  </main>
+    </header>
 
-  <footer>
-    <section aria-labelledby="contato-titulo">
-      <h2 id="contato-titulo">Contato</h2>
-      <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno</p>
-      <address>
-        <p>📞 <a href="tel:+5548988016299">(48) 9 8801-6299</a></p>
-        <p>📧 <a href="mailto:rafaelspadilhaprof+site@gmail.com">rafaelspadilhaprof@gmail.com</a></p>
-        <p>📸 <a href="https://www.instagram.com/periplous_udesc" target="_blank" rel="noopener">@exemplo_apenas</a></p>
-      </address>
-    </section>
-  </footer>
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <h1>Sejam Bem Vindos!</h1>
+                <p class="subtitle">Site do Professor Rafael de Souza Padilha.</p>
+                <p class="maintenance-notice">Este site encontra-se em constante atualização e desenvolvimento.</p>
+                <a href="#resumo" class="cta-button">Saiba Mais</a>
+            </div>
+        </section>
 
-  <script>
-    // Atualiza o ano automaticamente
-    document.getElementById('ano-atual').textContent = new Date().getFullYear();
-  </script>
+        <section id="resumo" class="about-section">
+            <div class="container">
+                <h2>Resumo do Site</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Este site é destinado ao portfólio dos alunos do professor Rafael de Souza. Aqui estão arquivados todos os projetos desenvolvidos pelos alunos no decorrer dos cursos de Informática e Hardware da Microcamp Florianópolis.</p>
+                        <p>Siga os botões ou a seção "Arquivo" no menu para acessar os sites dos alunos. Os projetos dos alunos que ainda estão em desenvolvimento podem ser encontrados abaixo, e os demais (corrigidos e comentados pelo professor) ficam salvos na seção "Arquivo".</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://placehold.co/600x400/EFEFEF/AAAAAA&text=Prof.+Rafael+e+Alunos" alt="Professor Rafael e Alunos Placeholder">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos-dev" class="services-section portfolio-section"> {/* Combinando estilos para reutilização */}
+            <div class="container">
+                <h2>Projetos em Desenvolvimento</h2>
+                <p style="text-align: center; margin-bottom: 40px;">Acompanhe os trabalhos mais recentes dos nossos alunos!</p>
+                <div class="portfolio-grid">
+                    {/* Placeholders para projetos em desenvolvimento */}
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/400x300/DDDDDD/AAAAAA&text=Projeto+Aluno+A" alt="Projeto Aluno A">
+                        <div class="portfolio-caption">Projeto Aluno A</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/400x300/CCCCCC/AAAAAA&text=Projeto+Aluno+B" alt="Projeto Aluno B">
+                        <div class="portfolio-caption">Projeto Aluno B</div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://placehold.co/400x300/BBBBBB/AAAAAA&text=Projeto+Aluno+C" alt="Projeto Aluno C">
+                        <div class="portfolio-caption">Projeto Aluno C</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="playlist-aulas" class="playlist-section">
+            <div class="container">
+                <h2>Playlist das Aulas</h2>
+                <p>Ouça uma musiquinha enquanto programa! Programação sem música é só escrita.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=YOUR_PLAYLIST_ID_HERE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    {/* Lembre-se de substituir YOUR_PLAYLIST_ID_HERE pelo ID real da sua playlist */}
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </form>
+                <div class="contact-info-footer">
+                    <p>📞 Telefone: <a href="tel:+5548988016299">(48) 9 8801-6299</a></p>
+                    <p>📧 E-mail: <a href="mailto:rafaelspadilhaprof+site@gmail.com">rafaelspadilhaprof@gmail.com</a></p>
+                    <p>📸 Instagram: <a href="https://www.instagram.com/periplous_udesc" target="_blank">@periplous_udesc (Exemplo)</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno Microcamp</p>
+            <div class="social-links">
+                {/* Adicione links para redes sociais se desejar, ex:
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                Para usar ícones FontAwesome, adicione o link no <head>
+                */}
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
