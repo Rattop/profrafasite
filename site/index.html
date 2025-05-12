@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags do seu site original -->
+
+    <!-- Meta tags para SEO e compartilhamento -->
     <meta name="keywords" content="Aulas, Programação, Microcamp, Portfólio, Alunos, Professor Rafael">
     <meta name="description" content="Site do Professor Rafael do curso de Informática e Hardware da escola Microcamp Florianópolis. Aqui ficam também arquivados os sites completos de todos os alunos que já passaram pelo curso.">
     <meta name="author" content="Prof. Rafael de Souza Padilha">
     <meta name="robots" content="index, follow">
+
+    <!-- Ícone da página -->
     <link rel="icon" href="https://files.catbox.moe/vqwe9n.png" type="image/png">
+
+    <!-- Meta tags para Open Graph (redes sociais) -->
     <meta property="og:title" content="Professor Rafael - Programação!">
     <meta property="og:description" content="Site do Professor Rafael. Aqui você encontra o arquivo de nossas aulas e portfólios dos alunos.">
     <meta property="og:image" content="https://files.catbox.moe/vqwe9n.png">
-    <meta property="og:url" content="https://profrafasite.onrender.com/"> {/* Atualize se o URL mudar */}
+    <meta property="og:url" content="https://profrafasite.onrender.com/">
     <meta property="og:type" content="website">
+
+    <!-- Meta tags para Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Professor Rafael - Programação!">
     <meta name="twitter:description" content="Site do Professor Rafael. Aqui você encontra o arquivo de nossas aulas e portfólios dos alunos.">
     <meta name="twitter:image" content="https://files.catbox.moe/vqwe9n.png">
-    <!-- Fim das meta tags do seu site original -->
 
-    <title>Professor Rafael - Programação!  </title>
+    <!-- Título da página -->
+    <title>Professor Rafael - Programação!</title>
+
+    <!-- Folhas de estilo -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Cabeçalho do site -->
     <header class="site-header">
         <div class="container header-container-custom">
             <div class="logo-area">
@@ -37,6 +49,7 @@
                     <h2>Prof. Rafael de Souza</h2>
                 </div>
             </div>
+            <!-- Navegação principal -->
             <nav class="main-nav">
                 <button class="nav-toggle" aria-label="Abrir navegação">
                     <span class="hamburger"></span>
@@ -48,8 +61,8 @@
                         <a href="#" class="dropdown-toggle-nav">Arquivo <span class="arrow-down"></span></a>
                         <ul class="dropdown-menu-nav">
                             <li><a href="arquivo/index.html">Turma Segunda as 10</a></li>
-                            <li><a href="#">Turma X (Placeholder)</a></li>
-                            <li><a href="#">Turma Y (Placeholder)</a></li>
+                            <li><a href="#">Turma X</a></li>
+                            <li><a href="#">Turma Y</a></li>
                         </ul>
                     </li>
                     <li><a href="#contato">Contato</a></li>
@@ -58,7 +71,9 @@
         </div>
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
+        <!-- Seção de boas-vindas -->
         <section id="inicio" class="hero-section">
             <div class="container">
                 <h1>Sejam Bem Vindos!</h1>
@@ -68,6 +83,7 @@
             </div>
         </section>
 
+        <!-- Seção sobre o site -->
         <section id="resumo" class="about-section">
             <div class="container">
                 <h2>Resumo do Site</h2>
@@ -77,18 +93,18 @@
                         <p>Siga os botões ou a seção "Arquivo" no menu para acessar os sites dos alunos. Os projetos dos alunos que ainda estão em desenvolvimento podem ser encontrados abaixo, e os demais (corrigidos e comentados pelo professor) ficam salvos na seção "Arquivo".</p>
                     </div>
                     <div class="about-image">
-                        <img src="https://placehold.co/600x400/EFEFEF/AAAAAA&text=Prof.+Rafael+e+Alunos" alt="Professor Rafael e Alunos Placeholder">
+                        <img src="https://placehold.co/600x400/EFEFEF/AAAAAA&text=Prof.+Rafael+e+Alunos" alt="Professor Rafael e Alunos">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projetos-dev" class="services-section portfolio-section"> {/* Combinando estilos para reutilização */}
+        <!-- Seção de projetos em desenvolvimento -->
+        <section id="projetos-dev" class="services-section portfolio-section">
             <div class="container">
                 <h2>Projetos em Desenvolvimento</h2>
                 <p style="text-align: center; margin-bottom: 40px;">Acompanhe os trabalhos mais recentes dos nossos alunos!</p>
                 <div class="portfolio-grid">
-                    {/* Placeholders para projetos em desenvolvimento */}
                     <div class="portfolio-item">
                         <img src="https://placehold.co/400x300/DDDDDD/AAAAAA&text=Projeto+Aluno+A" alt="Projeto Aluno A">
                         <div class="portfolio-caption">Projeto Aluno A</div>
@@ -105,17 +121,18 @@
             </div>
         </section>
 
+        <!-- Seção da playlist do YouTube -->
         <section id="playlist-aulas" class="playlist-section">
             <div class="container">
                 <h2>Playlist das Aulas</h2>
                 <p>Ouça uma musiquinha enquanto programa! Programação sem música é só escrita.</p>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=YOUR_PLAYLIST_ID_HERE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    {/* Lembre-se de substituir YOUR_PLAYLIST_ID_HERE pelo ID real da sua playlist */}
                 </div>
             </div>
         </section>
 
+        <!-- Seção de contato -->
         <section id="contato" class="contact-section">
             <div class="container">
                 <h2>Entre em Contato</h2>
@@ -147,20 +164,17 @@
         </section>
     </main>
 
+    <!-- Rodapé do site -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno Microcamp</p>
             <div class="social-links">
-                {/* Adicione links para redes sociais se desejar, ex:
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                Para usar ícones FontAwesome, adicione o link no <head>
-                */}
+                <!-- Links para redes sociais podem ser adicionados aqui -->
             </div>
         </div>
     </footer>
 
+    <!-- Scripts JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>

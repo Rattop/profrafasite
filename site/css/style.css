@@ -1,8 +1,8 @@
-/* Reset Básico e Configurações Globais */
+/* Definição de variáveis globais */
 :root {
-  --primary-color: #4b0082; /* Roxo do seu site original */
-  --secondary-color: #5e60ce; /* Cor de hover do seu site original */
-  --accent-color: #FFD700; /* Dourado para destaque */
+  --primary-color: #4b0082;
+  --secondary-color: #5e60ce;
+  --accent-color: #FFD700;
   --text-color: #333;
   --background-color: #FFFFFF;
   --light-gray: #f8f9fa;
@@ -11,12 +11,14 @@
   --font-secondary: 'Open Sans', sans-serif;
 }
 
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Configurações gerais */
 html {
   scroll-behavior: smooth;
 }
@@ -28,6 +30,7 @@ body {
   background-color: var(--background-color);
 }
 
+/* Container principal */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -35,6 +38,7 @@ body {
   padding: 0 20px;
 }
 
+/* Estilos de títulos */
 h1, h2, h3 {
   font-family: var(--font-primary);
   margin-bottom: 0.8em;
@@ -42,7 +46,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.5rem; /* Ajustado para o header */
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -52,6 +56,7 @@ h2 {
   position: relative;
 }
 
+/* Linha decorativa abaixo dos títulos h2 */
 h2::after {
   content: '';
   display: block;
@@ -61,6 +66,7 @@ h2::after {
   margin: 10px auto 0;
 }
 
+/* Estilos básicos */
 p {
   margin-bottom: 1em;
 }
@@ -81,9 +87,9 @@ img {
   display: block;
 }
 
-/* Header Customizado */
+/* Estilo do cabeçalho */
 .site-header {
-  background-color: var(--primary-color); /* Cor do seu header original */
+  background-color: var(--primary-color);
   padding: 1em 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
@@ -91,19 +97,22 @@ img {
   z-index: 1000;
 }
 
+/* Container do cabeçalho */
 .site-header .container.header-container-custom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Área do logo */
 .logo-area {
   display: flex;
   align-items: center;
 }
 
+/* Ícone do site */
 .site-icon-custom {
-  width: 60px; /* Ajuste o tamanho conforme necessário */
+  width: 60px;
   height: 60px;
   border-radius: 50%;
   margin-right: 15px;
@@ -111,6 +120,7 @@ img {
   border: 2px solid var(--background-color);
 }
 
+/* Títulos do cabeçalho */
 .header-titles-custom h1,
 .header-titles-custom h2 {
   margin: 0;
@@ -119,39 +129,39 @@ img {
 }
 
 .header-titles-custom h1 {
-  font-size: 1.6rem; /* Ajustado */
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 .header-titles-custom h2 {
-  font-size: 1rem; /* Ajustado */
+  font-size: 1rem;
   font-weight: 400;
   font-family: var(--font-secondary);
 }
 
-
-/* Navegação Principal */
+/* Navegação principal */
 .main-nav ul {
   list-style: none;
   display: flex;
-  align-items: center; /* Alinha itens do menu, incluindo dropdown */
+  align-items: center;
 }
 
 .main-nav ul li {
-  margin-left: 20px; /* Espaçamento entre itens */
-  position: relative; /* Para o dropdown */
+  margin-left: 20px;
+  position: relative;
 }
 
 .main-nav ul li a {
   font-family: var(--font-primary);
   font-weight: 600;
-  color: var(--background-color); /* Cor dos links no header */
+  color: var(--background-color);
   padding: 8px 5px;
   position: relative;
-  display: flex; /* Para alinhar a seta do dropdown */
+  display: flex;
   align-items: center;
 }
 
+/* Efeito de linha sob os links */
 .main-nav ul li a::after {
   content: '';
   position: absolute;
@@ -159,7 +169,7 @@ img {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--accent-color); /* Destaque para o link ativo/hover */
+  background-color: var(--accent-color);
   transition: width 0.3s ease;
 }
 
@@ -169,79 +179,25 @@ img {
 }
 
 .main-nav ul li a:hover {
-  color: var(--accent-color); /* Cor ao passar o mouse */
+  color: var(--accent-color);
 }
 
-/* Dropdown Navegação */
-.dropdown-nav .arrow-down {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 6px;
-  vertical-align: middle;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid var(--background-color); /* Cor da seta */
-  transition: transform 0.3s ease;
-}
-
-.dropdown-nav:hover .arrow-down {
-  transform: rotate(180deg);
-}
-
-.dropdown-menu-nav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--primary-color); /* Fundo do dropdown */
-  min-width: 200px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 1001;
-  border-radius: 0 0 5px 5px;
-  padding: 5px 0;
-  flex-direction: column; /* Para o menu dropdown */
-}
-
-.dropdown-nav:hover .dropdown-menu-nav {
-  display: flex; /* Alterado para flex para consistência */
-}
-
-.dropdown-menu-nav li {
-  margin: 0;
-  width: 100%;
-}
-
-.dropdown-menu-nav li a {
-  padding: 10px 15px;
-  color: var(--background-color);
-  display: block; /* Para ocupar toda a largura */
-  white-space: nowrap;
-}
-.dropdown-menu-nav li a::after { /* Remove sublinhado do item do dropdown */
-  display: none;
-}
-
-.dropdown-menu-nav li a:hover {
-  background-color: var(--secondary-color); /* Cor de hover para itens do dropdown */
-  color: var(--background-color);
-}
-
-
+/* Botão de menu mobile */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 10px;
-  z-index: 1002; /* Para ficar acima de outros elementos */
+  z-index: 1002;
 }
 
+/* Estilo do ícone hamburger */
 .hamburger {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: var(--background-color); /* Cor do hamburguer no header escuro */
+  background-color: var(--background-color);
   position: relative;
   transition: background-color 0.3s ease;
 }
@@ -252,7 +208,7 @@ img {
   position: absolute;
   width: 25px;
   height: 3px;
-  background-color: var(--background-color); /* Cor do hamburguer */
+  background-color: var(--background-color);
   left: 0;
   transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
 }
@@ -265,32 +221,33 @@ img {
   bottom: -8px;
 }
 
-/* Hero Section */
+/* Seção hero */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/4A0082/FFFFFF&text=Bem-Vindos!') no-repeat center center/cover; /* Cor primária como fundo */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/4A0082/FFFFFF&text=Bem-Vindos!') no-repeat center center/cover;
   color: var(--background-color);
-  padding: 80px 0; /* Reduzido um pouco */
+  padding: 80px 0;
   text-align: center;
-  min-height: 60vh; /* Reduzido */
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero-section h1 {
-  font-size: 3rem; /* Ajustado */
+  font-size: 3rem;
   margin-bottom: 0.5em;
   color: var(--background-color);
 }
 
 .hero-section .subtitle {
-  font-size: 1.2rem; /* Ajustado */
+  font-size: 1.2rem;
   margin-bottom: 1em;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Aviso de manutenção */
 .maintenance-notice {
   font-size: 1rem;
   font-style: italic;
@@ -298,10 +255,11 @@ img {
   color: var(--accent-color);
 }
 
+/* Botão de chamada para ação */
 .cta-button {
   display: inline-block;
-  background-color: var(--accent-color); /* Usando accent color */
-  color: var(--dark-gray); /* Texto escuro para contraste com amarelo */
+  background-color: var(--accent-color);
+  color: var(--dark-gray);
   padding: 15px 30px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -317,16 +275,16 @@ img {
   color: var(--dark-gray);
 }
 
-/* Seções Genéricas */
+/* Estilos gerais das seções */
 section {
-  padding: 70px 0; /* Ajustado */
+  padding: 70px 0;
 }
 
 section:nth-child(even) {
   background-color: var(--light-gray);
 }
 
-/* About Section (Resumo) */
+/* Seção Sobre */
 .about-content {
   display: flex;
   align-items: center;
@@ -347,14 +305,15 @@ section:nth-child(even) {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Services Section (Usado para Projetos em Dev) */
-.services-grid { /* Mantido caso precise de cards de serviço no futuro */
+/* Grid de serviços */
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 50px;
 }
 
+/* Cards de serviço */
 .service-card {
   background-color: var(--background-color);
   padding: 30px;
@@ -383,13 +342,14 @@ section:nth-child(even) {
   margin-bottom: 10px;
 }
 
-/* Portfolio Section (Usado para Projetos em Dev) */
+/* Grid do portfólio */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustado para melhor encaixe */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
+/* Items do portfólio */
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -406,12 +366,13 @@ section:nth-child(even) {
   transform: scale(1.1);
 }
 
+/* Legenda do portfólio */
 .portfolio-caption {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(75, 0, 130, 0.85); /* Cor primária com opacidade */
+  background-color: rgba(75, 0, 130, 0.85);
   color: var(--background-color);
   padding: 15px;
   text-align: center;
@@ -426,21 +387,24 @@ section:nth-child(even) {
   transform: translateY(0);
 }
 
-/* Playlist Section */
+/* Seção de playlist */
 .playlist-section {
-  background-color: var(--light-gray); /* Para alternar cor */
+  background-color: var(--light-gray);
   text-align: center;
 }
+
 .playlist-section p {
   margin-bottom: 30px;
   font-size: 1.1rem;
 }
+
+/* Container de vídeo */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* Proporção 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 800px; /* Limita a largura máxima do vídeo */
+  max-width: 800px;
   margin: 0 auto;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -454,11 +418,10 @@ section:nth-child(even) {
   height: 100%;
 }
 
-
-/* Contact Section */
+/* Formulário de contato */
 .contact-form {
   max-width: 700px;
-  margin: 40px auto 30px auto; /* Espaço antes do contact-info-footer */
+  margin: 40px auto 30px auto;
   background-color: var(--background-color);
   padding: 30px;
   border-radius: 8px;
@@ -476,6 +439,7 @@ section:nth-child(even) {
   font-family: var(--font-primary);
 }
 
+/* Campos do formulário */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
@@ -491,6 +455,7 @@ section:nth-child(even) {
   resize: vertical;
 }
 
+/* Botão de envio */
 .submit-button {
   display: block;
   width: 100%;
@@ -510,24 +475,26 @@ section:nth-child(even) {
   background-color: darken(var(--secondary-color), 10%);
 }
 
+/* Informações de contato no rodapé */
 .contact-info-footer {
   text-align: center;
   margin-top: 40px;
 }
+
 .contact-info-footer p {
   margin-bottom: 8px;
   font-size: 1rem;
 }
+
 .contact-info-footer p a {
   font-weight: 600;
 }
 
-
-/* Footer */
+/* Rodapé do site */
 .site-footer {
   background-color: var(--dark-gray);
   color: var(--light-gray);
-  padding: 30px 0; /* Ajustado */
+  padding: 30px 0;
   text-align: center;
 }
 
@@ -536,6 +503,7 @@ section:nth-child(even) {
   font-size: 0.9rem;
 }
 
+/* Links sociais */
 .social-links a {
   color: var(--light-gray);
   margin: 0 10px;
@@ -547,150 +515,153 @@ section:nth-child(even) {
   color: var(--primary-color);
 }
 
-/* Responsividade */
-@media (max-width: 992px) { /* Ponto de quebra para o menu */
+/* Media Queries */
+@media (max-width: 992px) {
+  /* Ajustes do cabeçalho para mobile */
   .site-header .container.header-container-custom {
-      flex-direction: column;
-      align-items: center; /* Centraliza no mobile */
-  }
-  .logo-area {
-      margin-bottom: 15px;
-      text-align: center; /* Centraliza ícone e texto */
-  }
-  .header-titles-custom h1 {
-      font-size: 1.5rem;
-  }
-  .header-titles-custom h2 {
-      font-size: 0.9rem;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .logo-area {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .header-titles-custom h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-titles-custom h2 {
+    font-size: 0.9rem;
+  }
+
+  /* Navegação mobile */
   .main-nav {
-      width: 100%;
-      margin-top: 0; /* Removido margin-top */
+    width: 100%;
+    margin-top: 0;
   }
 
   .main-nav ul {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: var(--primary-color); /* Fundo para o menu mobile */
-      position: absolute;
-      top: 100%; /* Abaixo do header */
-      left: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   .main-nav ul.nav-active {
-      display: flex;
+    display: flex;
   }
 
   .main-nav ul li {
-      margin: 0; /* Remove margem lateral */
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.1); /* Divisor */
+    margin: 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
+
   .main-nav ul li:first-child {
-      border-top: none;
+    border-top: none;
   }
 
   .main-nav ul li a {
-      display: block;
-      padding: 15px; /* Mais área de toque */
-      width: 100%;
-  }
-  .main-nav ul li a::after { /* Remove sublinhado no mobile */
-      display: none;
+    display: block;
+    padding: 15px;
+    width: 100%;
   }
 
-  .dropdown-nav:hover .dropdown-menu-nav { /* Dropdown no mobile será por clique */
-      display: none;
-  }
-  .dropdown-nav.open .dropdown-menu-nav { /* Classe 'open' para mostrar no mobile */
-      display: flex;
-      position: static; /* Para fluir dentro do menu mobile */
-      box-shadow: none;
-      border-radius: 0;
-      background-color: darken(var(--primary-color), 5%); /* Levemente mais escuro */
-  }
-  .dropdown-menu-nav li a {
-      padding: 12px 20px;
-      font-size: 0.95rem;
-  }
-  .dropdown-nav .arrow-down { /* Ajusta a seta no mobile */
-      border-top-color: var(--background-color);
+  .main-nav ul li a::after {
+    display: none;
   }
 
-
+  /* Botão toggle do menu */
   .nav-toggle {
-      display: block;
-      position: absolute; /* Relativo ao .site-header */
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%); /* Centraliza verticalmente */
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
   }
 
   .nav-toggle.active .hamburger {
-      background-color: transparent;
+    background-color: transparent;
   }
+
   .nav-toggle.active .hamburger::before {
-      transform: rotate(45deg);
-      top: 0;
+    transform: rotate(45deg);
+    top: 0;
   }
+
   .nav-toggle.active .hamburger::after {
-      transform: rotate(-45deg);
-      bottom: 0px; /* Ajustado */
+    transform: rotate(-45deg);
+    bottom: 0;
   }
 }
 
-
 @media (max-width: 768px) {
+  /* Ajustes de tipografia */
   h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
+
   .hero-section h1 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
+
   .hero-section .subtitle {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 
   h2 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 
+  /* Ajustes de layout */
   .about-content {
-      flex-direction: column;
+    flex-direction: column;
   }
+
   .about-image {
-      margin-top: 30px;
+    margin-top: 30px;
   }
+
   .portfolio-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
+  /* Ajustes para telas muito pequenas */
   .hero-section h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
+
   .hero-section .subtitle {
-      font-size: 1rem;
+    font-size: 1rem;
   }
+
   .cta-button {
-      padding: 12px 25px;
-      font-size: 1rem;
+    padding: 12px 25px;
+    font-size: 1rem;
   }
+
   .portfolio-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
+
   .header-titles-custom h1 {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
+
   .header-titles-custom h2 {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
+
   .site-icon-custom {
-      width: 50px;
-      height: 50px;
+    width: 50px;
+    height: 50px;
   }
 }
