@@ -1,0 +1,148 @@
+/* ===== Estilos Globais ===== */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+  
+    /* Fundo com fallback e propriedades separadas */
+    background-color: #333; /* fallback enquanto carrega a imagem */
+    background-image: url('https://files.catbox.moe/7wrmyp.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  /* ===== Container Principal ===== */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(128, 128, 174, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ===== Cabeçalho ===== */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #008b8b;
+    color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  /* Ajuste de nomes de classe para kebab-case, conforme HTML */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .site-icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .header-text h1,
+  .header-text h2 {
+    margin: 0;
+  }
+  
+  /* ===== Navegação ===== */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    position: relative;
+  }
+  
+  nav ul a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul a:hover {
+    color: #ffd700;
+  }
+  
+  /* Dropdown de projetos */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #006666;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 140px;
+    z-index: 10;
+    flex-direction: column;
+  }
+  
+  .dropdown-content li {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* ===== Seções ===== */
+  main section {
+    margin: 40px 0;
+  }
+  
+  /* YouTube iframe sem borda */
+  iframe {
+    border: 0;
+    max-width: 100%;
+  }
+  
+  /* ===== Rodapé ===== */
+  footer {
+    background-color: #008b8b;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: #ffd700;
+  }
+  
+  /* ===== Responsividade ===== */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

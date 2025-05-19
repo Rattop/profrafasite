@@ -49,75 +49,91 @@
         </div>
     </footer>
 
-    <script>
-        // Array de projetos arquivados
-        const projetosArquivados = [
-            {
-                id: 1,
-                nome: "placeholder",
-                aluno: "Placeholder da Silva",
-                imagem: "https://placehold.co/400x300/DDDD/AAAA&text=Duny+Jogos",
-                url: "https://dunyjogos.neocities.org",
-                status: "Concluído",
-                descricao: "Enchendo linguiça",
-                dataCriacao: "2025-05-19",
-                tecnologias: ["HTML", "CSS", "JavaScript"]
-            },
+<script>
+    // Array de projetos arquivados
+    const projetosArquivados = [
+        {
+            id: 1,
+            nome: "Pedro Henrique",
+            aluno: "Pedro Henrique",
+            imagem: "https://placehold.co/400x300/DDDD/AAAA&text=Duny+Jogos",
+            url: "./pedro/index.html",
+            status: "Concluído",
+            descricao: "Site do aluno, ao clicar no botão sobre há um tutorial",
+            dataCriacao: "2025-02-10",
+            tecnologias: ["HTML", "CSS"]
+        },
+        {
+            id: 2,
+            nome: "Matheus Popinga",
+            aluno: "Matheus Popinga",
+            imagem: "https://placehold.co/400x300/DDDD/AAAA&text=Duny+Jogos",
+            url: "./popinga/index.html",
+            status: "Concluído",
+            descricao: "Portfólio de Imagens tiradas pelo aluno, como hobby",
+            dataCriacao: "2025-02-10",
+            tecnologias: ["HTML", "CSS"]
+        },
 
-        ];
+    ];
 
-        // Função para formatar a data
-        function formatarData(data) {
-            try {
-                const options = { day: 'numeric', month: 'long', year: 'numeric' };
-                return new Date(data).toLocaleDateString('pt-BR', options);
-            } catch (e) {
-                return data;
-            }
+    // Função para formatar a data
+    function formatarData(data) {
+        try {
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            return new Date(data).toLocaleDateString('pt-BR', options);
+        } catch (e) {
+            return data;
         }
+    }
 
-        // Função para renderizar os projetos arquivados
-        function renderizarProjetosArquivados() {
-            const container = document.getElementById('arquivo-container');
-            if (!container) return;
+    // Função para renderizar os projetos arquivados
+    function renderizarProjetosArquivados() {
+        const container = document.getElementById('arquivo-container');
+        if (!container) return;
 
-            container.innerHTML = projetosArquivados.map(projeto => {
-                // Validar URL
-                const url = projeto.url.startsWith('http') ? projeto.url : `https://${projeto.url}`;
-                
-                // Criar string de tecnologias
-                const tecnologias = projeto.tecnologias ? projeto.tecnologias.join(', ') : '';
-                
-                return `
-                    <a href="${url}" class="portfolio-link" target="_blank" rel="noopener noreferrer">
-                        <div class="portfolio-item" data-id="${projeto.id}">
-                            <img src="${projeto.imagem}" 
-                                 alt="${projeto.nome || 'Projeto sem nome'}"
-                                 onerror="this.src='https://placehold.co/400x300/FF0000/FFFFFF&text=Imagem+Indisponível'">
-                            <span class="portfolio-status">${projeto.status}</span>
-                            <div class="portfolio-caption">
-                                <h3>${projeto.nome || 'Projeto sem nome'}</h3>
-                                <p>Por: ${projeto.aluno}</p>
-                                <p class="project-description">${projeto.descricao}</p>
-                                <p class="project-tech">Tecnologias: ${tecnologias}</p>
-                                <small>Criado em: ${formatarData(projeto.dataCriacao)}</small>
-                            </div>
+        container.innerHTML = projetosArquivados.map(projeto => {
+            // Verifica se a URL é externa (http/https) ou local
+            const isExternal = projeto.url.startsWith('http');
+            // Para links locais, usa o caminho como está; para externos, usa o próprio
+            const url = projeto.url;
+
+            // Define o target: _blank para externos, _self para locais
+            const target = isExternal ? '_blank' : '_self';
+
+            // Cria string de tecnologias
+            const tecnologias = projeto.tecnologias ? projeto.tecnologias.join(', ') : '';
+
+            return `
+                <a href="${url}" class="portfolio-link" target="${target}" rel="noopener noreferrer">
+                    <div class="portfolio-item" data-id="${projeto.id}">
+                        <img src="${projeto.imagem}" 
+                             alt="${projeto.nome || 'Projeto sem nome'}"
+                             onerror="this.src='https://placehold.co/400x300/FF0000/FFFFFF&text=Imagem+Indisponível'">
+                        <span class="portfolio-status">${projeto.status}</span>
+                        <div class="portfolio-caption">
+                            <h3>${projeto.nome || 'Projeto sem nome'}</h3>
+                            <p>Por: ${projeto.aluno}</p>
+                            <p class="project-description">${projeto.descricao}</p>
+                            <p class="project-tech">Tecnologias: ${tecnologias}</p>
+                            <small>Criado em: ${formatarData(projeto.dataCriacao)}</small>
                         </div>
-                    </a>
-                `;
-            }).join('');
+                    </div>
+                </a>
+            `;
+        }).join('');
+    }
+
+    // Inicializar quando o documento estiver carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        renderizarProjetosArquivados();
+
+        // Atualizar ano no footer
+        const anoAtualSpan = document.getElementById('ano-atual');
+        if (anoAtualSpan) {
+            anoAtualSpan.textContent = new Date().getFullYear();
         }
-
-        // Inicializar quando o documento estiver carregado
-        document.addEventListener('DOMContentLoaded', function() {
-            renderizarProjetosArquivados();
-
-            // Atualizar ano no footer
-            const anoAtualSpan = document.getElementById('ano-atual');
-            if (anoAtualSpan) {
-                anoAtualSpan.textContent = new Date().getFullYear();
-            }
-        });
-    </script>
+    });
+</script>
 </body>
 </html>

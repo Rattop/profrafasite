@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- CORRETO: charset e viewport devem vir antes do título -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ERRO CORRIGIDO: havia dois títulos. Removido o duplicado e ajustado o texto -->
+  <title>Aula de programação em HTML – Pedro Henrique</title>
+
+  <!-- CORRETO: importação de fonte e CSS externo -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- INÍCIO DO CABEÇALHO -->
+    <header>
+      <div class="header-left"> <!-- ERRO CORRIGIDO: classe renomeada de "headerleft" para "header-left" para consistência -->
+        <div class="site-icon"> <!-- ERRO CORRIGIDO: renomeado de "siteicon" para "site-icon" -->
+          <img src="https://files.catbox.moe/aayaud.jpg" alt="logotipo">
+        </div>
+        <div class="header-text"> <!-- Renomeado para manter padrão de classe -->
+          <h1>Aula de programação em HTML</h1> <!-- CORRETO: um único <h1> por página -->
+          <h2>Aluno: Pedro Henrique</h2>
+        </div>
+      </div>
+
+      <div class="header-right"> <!-- ERRO CORRIGIDO: "headerright" → "header-right" -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="storage.html">Sobre</a></li>
+            <li class="dropdown">
+              <!-- ERRO: item "Projetos" não tem link funcional. Adicionado botão -->
+              <a href="#">Projetos</a>
+              <ul class="dropdown-content"> <!-- ERRO CORRIGIDO: classe renomeada de "dropdowncontent" -->
+                <li><a href="#">Projeto 1</a></li>
+                <li><a href="#">Projeto 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- FIM DO CABEÇALHO -->
+
+    <!-- INÍCIO DO CONTEÚDO PRINCIPAL -->
+    <main>
+      <section id="resumo">
+        <!-- CORRETO: inserção de título de seção para melhor semântica -->
+        <h2>Resumo</h2>
+        <p>Escute uma música enquanto navega pelo site!</p>
+
+        <!-- ERRO: uso de frameborder (obsoleto). Corrigido com style -->
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/8SbUC-UaAxE"
+          title="Música para ouvir no site"
+          style="border:0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </section>
+
+      <section id="projetos">
+        <h2>Projetos</h2>
+        <div id="botoes-container">
+          <!-- Espaço reservado para projetos futuros -->
+        </div>
+      </section>
+    </main>
+    <!-- FIM DO CONTEÚDO PRINCIPAL -->
+
+    <!-- INÍCIO DO RODAPÉ -->
+    <footer>
+      <h3>Contato</h3>
+      <!-- ERRO CORRIGIDO: telefones e emails agora são clicáveis -->
+      <p>📞 Telefone: <a href="tel:+5551992335506">(51) 9 9233-5506</a></p>
+      <p>📧 E-mail: <a href="mailto:pdemoraes25@gmail.com">pdemoraes25@gmail.com</a></p>
+      <p>📸 Instagram: <a href="https://www.instagram.com/moraespedrk" target="_blank">@moraespedrk</a></p>
+    </footer>
+    <!-- FIM DO RODAPÉ -->
+  </div>
+</body>
+</html>

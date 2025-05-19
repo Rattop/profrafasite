@@ -1,0 +1,111 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: url('https://files.catbox.moe/7wrmyp.jpg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(128, 128, 174, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header {
+  background-color: #008B8B;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerleft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.siteicon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+}
+
+/* Dropdown */
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #006666;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  min-width: 140px;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdowncontent li {
+  padding: 10px;
+  text-align: left;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+
+footer {
+  background-color: #008B8B;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
