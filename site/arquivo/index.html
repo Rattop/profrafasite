@@ -1,73 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Aulas, Programação, Microcamp, Portfólio, Alunos">
-    <meta name="description" content="Site do Professor Rafael do curso de Informática e Hardware da escola Microcamp Florianópolis. Aqui ficam também arquivados os sites completos de todos os alunos que já passaram pelo curso">
-    <meta name="author" content="Prof. Rafael de Souza Padilha">
-    <meta name="robots" content="index">
-    <meta http-equiv="content-language" content="pt-br">
-    <link rel="stylesheet" href="../style.css">
+    <title>Arquivo de Projetos - Professor Rafael</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="https://files.catbox.moe/vqwe9n.png" type="image/png">
-    <title>Professor Rafael - Arquivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-left">
-                <div class="site-icon"><img src="https://files.catbox.moe/vqwe9n.png" alt="icone do site"></div>
+    <header class="site-header">
+        <div class="container header-container-custom">
+            <div class="logo-area">
+                <img src="https://files.catbox.moe/vqwe9n.png" alt="Ícone Professor Rafael" class="site-icon-custom">
+                <div class="header-titles-custom">
+                    <h1>Arquivo de Projetos</h1>
+                    <h2>Prof. Rafael de Souza</h2>
+                </div>
             </div>
-            <div class="header-text">
-                <h1>Projetos dos Alunos:</h1>
-                <h2>Professor: Rafael de Souza</h2>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#resumo">Sobre</a></li>
+                    <li><a href="index.html" class="active">Arquivo</a></li>
+                    <li><a href="../index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="portfolio-section">
+            <div class="container">
+                <h2>Projetos Arquivados</h2>
+                <p style="text-align: center; margin-bottom: 40px;">Aqui estão os projetos já finalizados e corrigidos pelo professor.</p>
+                <div class="portfolio-grid" id="arquivo-container">
+                    <!-- Os projetos arquivados serão listados aqui -->
+                </div>
             </div>
-            <div class="header-right">
-                <nav>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../sobre.html">Sobre</a></li>
-                        <li class="dropdown">
-                            <a href="">Arquivo</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">Turma Segunda as 10</a></li>
-                                <li><a href="#">Turma Segunda as 16</a></li>
-                                <li><a href="#">Turma X</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno Microcamp</p>
+        </div>
+    </footer>
+
+    <script>
+        // Array de projetos arquivados
+        const projetosArquivados = [
+            {
+                id: 1,
+                nome: "placeholder",
+                aluno: "Placeholder da Silva",
+                imagem: "https://placehold.co/400x300/DDDD/AAAA&text=Duny+Jogos",
+                url: "https://dunyjogos.neocities.org",
+                status: "Concluído",
+                descricao: "Enchendo linguiça",
+                dataCriacao: "2025-05-19",
+                tecnologias: ["HTML", "CSS", "JavaScript"]
+            },
+
+        ];
+
+        // Função para formatar a data
+        function formatarData(data) {
+            try {
+                const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                return new Date(data).toLocaleDateString('pt-BR', options);
+            } catch (e) {
+                return data;
+            }
+        }
+
+        // Função para renderizar os projetos arquivados
+        function renderizarProjetosArquivados() {
+            const container = document.getElementById('arquivo-container');
+            if (!container) return;
+
+            container.innerHTML = projetosArquivados.map(projeto => {
+                // Validar URL
+                const url = projeto.url.startsWith('http') ? projeto.url : `https://${projeto.url}`;
                 
-            </div>
+                // Criar string de tecnologias
+                const tecnologias = projeto.tecnologias ? projeto.tecnologias.join(', ') : '';
+                
+                return `
+                    <a href="${url}" class="portfolio-link" target="_blank" rel="noopener noreferrer">
+                        <div class="portfolio-item" data-id="${projeto.id}">
+                            <img src="${projeto.imagem}" 
+                                 alt="${projeto.nome || 'Projeto sem nome'}"
+                                 onerror="this.src='https://placehold.co/400x300/FF0000/FFFFFF&text=Imagem+Indisponível'">
+                            <span class="portfolio-status">${projeto.status}</span>
+                            <div class="portfolio-caption">
+                                <h3>${projeto.nome || 'Projeto sem nome'}</h3>
+                                <p>Por: ${projeto.aluno}</p>
+                                <p class="project-description">${projeto.descricao}</p>
+                                <p class="project-tech">Tecnologias: ${tecnologias}</p>
+                                <small>Criado em: ${formatarData(projeto.dataCriacao)}</small>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            }).join('');
+        }
 
-        </header>
-            <h2>Sejam Bem Vindos ao nosso Arquivo!</h2>
-            <h3>Site encontra-se em manutenção no momento</h3>
-        <section id="resumo">
-            <p>Onde estamos?</p>
-            <p>Aqui estão arquivados os projetos de todos os alunos que trabalhei</p>
-            <p>espero que lhe seja de grande auxílio os conteúdos desta página!</p>
+        // Inicializar quando o documento estiver carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            renderizarProjetosArquivados();
 
-
-        </section>
-        <section id="projetos">
-            <h3>Projetos dos alunos:</h3>
-            <h4>Turma Segunda às 10hs</h4>
-            <p>Place Holder Place Holder Place Holder Place Holder Place Holder</p>
-            <p>Place Holder Place Holder Place Holder Place Holder Place Holder</p>
-            <h4>Turma Segunda às 16hs</h4>
-            <p>Place Holder Place Holder Place Holder Place Holder Place Holder</p>
-            <p>Place Holder Place Holder Place Holder Place Holder Place Holder</p>
-        </section>
-        <footer>
-            <h3>Contato</h3>
-            <p>&copy; <span id="ano-atual"></span> Rafael de Souza Padilha | Portal do Aluno</p>
-            <!-- com Links -->
-            <p>📞 Telefone: <a href="tel:+5548988016299">(48) 9 8801-6299</a></p>
-            <p>📧 E-mail: <a href="mailto:rafaelspadilhaprof+site@gmail.com">rafaelspadilhaprof@gmail.com</a></p>
-            <p>📸 Instagram: <a href="https://www.instagram.com/periplous_udesc" target="_blank">@exemplo_apenas</a></p>
-          </footer>
-    </div>
-    <script src="../script.js"></script>
+            // Atualizar ano no footer
+            const anoAtualSpan = document.getElementById('ano-atual');
+            if (anoAtualSpan) {
+                anoAtualSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
 </body>
 </html>

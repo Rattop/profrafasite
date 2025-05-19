@@ -665,3 +665,57 @@ section:nth-child(even) {
     height: 50px;
   }
 }
+
+/* Adicione isso ao seu arquivo style.css */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.portfolio-caption {
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(75, 0, 130, 0.95));
+    color: white;
+}
+
+.project-description {
+    font-size: 0.9em;
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.project-tech {
+    font-size: 0.8em;
+    color: var(--accent-color);
+    margin: 5px 0;
+}
+
+.portfolio-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    color: var(--dark-gray);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.portfolio-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+small {
+    display: block;
+    font-size: 0.75em;
+    opacity: 0.8;
+    margin-top: 5px;
+}
