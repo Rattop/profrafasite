@@ -7,7 +7,7 @@ const projetos = [
         imagem: "https://placehold.co/400x300/DDDD/AAAA&text=Duny+Jogos",
         url: "https://dunyjogos.neocities.org",
         status: "Em desenvolvimento",
-        descricao: "Site de jogos e entretenimento",
+        descricao: "?",
         dataCriacao: "2025-05-19",
         tecnologias: ["HTML", "CSS", "JavaScript"]
     },
@@ -18,7 +18,7 @@ const projetos = [
         imagem: "https://placehold.co/400x300/CCCC/AAAA&text=Point-X",
         url: "https://point-x.neocities.org",
         status: "Em desenvolvimento",
-        descricao: "Site de tecnologia e games",
+        descricao: "?",
         dataCriacao: "2025-05-19",
         tecnologias: ["HTML", "CSS", "JavaScript"]
     },
@@ -29,7 +29,7 @@ const projetos = [
         imagem: "https://placehold.co/400x300/BBBB/AAAA&text=Pelu+Coelho",
         url: "https://pelucoelho.neocities.org",
         status: "Em desenvolvimento",
-        descricao: "Portfolio pessoal",
+        descricao: "?",
         dataCriacao: "2025-05-19",
         tecnologias: ["HTML", "CSS", "JavaScript"]
     },
@@ -40,7 +40,7 @@ const projetos = [
         imagem: "https://placehold.co/400x300/AAAA/AAAA&text=Katuaba",
         url: "https://katuaba.neocities.org",
         status: "Em desenvolvimento",
-        descricao: "Site de bebidas e entretenimento",
+        descricao: "?",
         dataCriacao: "2025-05-19",
         tecnologias: ["HTML", "CSS", "JavaScript"]
     },

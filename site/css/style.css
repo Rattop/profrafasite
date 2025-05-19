@@ -223,7 +223,7 @@ img {
 
 /* Seção hero */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/4A0082/FFFFFF&text=Bem-Vindos!') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../recursos/background.jpg) no-repeat center center/cover;
   color: var(--background-color);
   padding: 80px 0;
   text-align: center;
